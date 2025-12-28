@@ -88,8 +88,8 @@ async def _async_setup_entity(hass, config, async_add_entities):
 
         try:
             codes_source = (
-                "https://raw.githubusercontent.com/"
-                "smartHomeHub/SmartIR/master/"
+                "https://github.com/"
+                "fengshutao/SmartIR/master/"
                 "codes/light/{}.json"
             )
 
@@ -388,4 +388,5 @@ class SmartIRLight(LightEntity, RestoreEntity):
         if new_state.state == STATE_OFF:
             self._on_by_remote = False
             self._power = STATE_OFF
+
             self.async_write_ha_state()
