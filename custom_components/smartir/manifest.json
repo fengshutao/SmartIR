@@ -1,4 +1,4 @@
-sh{
+{
   "domain": "smartir",
   "name": "SmartIR",
   "documentation": "https://github.com/fengshutao/SmartIR",
@@ -27,4 +27,5 @@ sh{
   }
 
 }
+
 
