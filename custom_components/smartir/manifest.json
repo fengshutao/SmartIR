@@ -1,9 +1,9 @@
-{
+sh{
   "domain": "smartir",
   "name": "SmartIR",
   "documentation": "https://github.com/fengshutao/SmartIR",
   "dependencies": [],
-  "codeowners": ["@smartHomeHub"],
+  "codeowners": ["@fengshutao"],
   "requirements": ["aiofiles>=0.6.0"],
   "homeassistant": "2022.5.0",
   "version": "1.0.0",
@@ -27,3 +27,4 @@
   }
 
 }
+
