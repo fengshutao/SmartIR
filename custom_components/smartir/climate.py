@@ -83,8 +83,8 @@ async def _async_setup_entity(hass, config, async_add_entities):
                         "try to download it from the GitHub repo.")
 
         try:
-            codes_source = ("https://raw.githubusercontent.com/"
-                            "smartHomeHub/SmartIR/master/"
+            codes_source = ("https://github.com/"
+                            "fengshutao/SmartIR/master/"
                             "codes/climate/{}.json")
 
             await Helper.downloader(codes_source.format(device_code), device_json_path)
@@ -464,4 +464,5 @@ class SmartIRClimate(ClimateEntity, RestoreEntity):
             if state.state != STATE_UNKNOWN and state.state != STATE_UNAVAILABLE:
                 self._current_humidity = float(state.state)
         except ValueError as ex:
+
             _LOGGER.error("Unable to update from humidity sensor: %s", ex)
