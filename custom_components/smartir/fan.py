@@ -74,8 +74,8 @@ async def _async_setup_entity(hass, config, async_add_entities):
                         "try to download it from the GitHub repo.")
 
         try:
-            codes_source = ("https://raw.githubusercontent.com/"
-                            "smartHomeHub/SmartIR/master/"
+            codes_source = ("https://github.com/"
+                            "fengshutao/SmartIR/master/"
                             "codes/fan/{}.json")
 
             await Helper.downloader(codes_source.format(device_code), device_json_path)
@@ -317,4 +317,5 @@ class SmartIRFan(FanEntity, RestoreEntity):
             self._on_by_remote = False
             if self._speed != SPEED_OFF:
                 self._speed = SPEED_OFF
+
             self.async_write_ha_state()
