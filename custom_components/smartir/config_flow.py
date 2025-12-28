@@ -16,7 +16,7 @@ from . import DOMAIN
 _LOGGER = logging.getLogger(__name__)
 
 DEVICE_TYPES = [
-    ("climate", "Climate (AC)"),
+    ("climate", "Climate"),
     ("fan", "Fan"),
     ("light", "Light"),
     ("media_player", "Media Player"),
@@ -150,4 +150,5 @@ class SmartIROptionsFlow(config_entries.OptionsFlow):
         return self.async_show_form(
             step_id="init",
             data_schema=vol.Schema(fields)
+
         )
