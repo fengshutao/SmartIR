@@ -1,0 +1,66 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure SmartIR Device",
+        "description": "Select device type and enter basic information.",
+        "data": {
+          "device_type": "Device Type",
+          "name": "Name",
+          "unique_id": "Unique ID (optional)",
+          "device_code": "Device Code",
+          "controller_data": "Controller Data",
+          "delay": "Delay (seconds)",
+          "power_sensor": "Power Sensor (optional)"
+        }
+      },
+      "device_specific": {
+        "title": "Device Specific Configuration",
+        "description": "Configure additional parameters for the selected device type."
+      }
+    },
+    "error": {
+      "invalid_device_type": "Invalid device type selected."
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update SmartIR Device Configuration",
+        "description": "Update the configuration for this SmartIR device.",
+        "data": {
+          "name": "Name",
+          "device_code": "Device Code",
+          "controller_data": "Controller Data",
+          "delay": "Delay (seconds)",
+          "power_sensor": "Power Sensor",
+          "temperature_sensor": "Temperature Sensor",
+          "humidity_sensor": "Humidity Sensor",
+          "power_sensor_restore_state": "Restore State from Power Sensor",
+          "device_class": "Device Class",
+          "source_names": "Source Names (JSON dict)"
+        }
+      }
+    }
+  },
+  "selector": {
+    "device_type": {
+      "options": {
+        "climate": "Climate (AC)",
+        "fan": "Fan",
+        "light": "Light",
+        "media_player": "Media Player"
+      }
+    },
+    "media_player_class": {
+      "options": {
+        "tv": "TV",
+        "receiver": "Receiver",
+        "speaker": "Speaker"
+      }
+    }
+  }
+}
