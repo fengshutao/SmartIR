@@ -49,7 +49,7 @@
   "selector": {
     "device_type": {
       "options": {
-        "climate": "Climate (AC)",
+        "climate": "Climate",
         "fan": "Fan",
         "light": "Light",
         "media_player": "Media Player"
@@ -63,4 +63,5 @@
       }
     }
   }
+
 }
