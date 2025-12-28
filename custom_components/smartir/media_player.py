@@ -83,8 +83,8 @@ async def _async_setup_entity(hass, config, async_add_entities):
                         "try to download it from the GitHub repo.")
 
         try:
-            codes_source = ("https://raw.githubusercontent.com/"
-                            "smartHomeHub/SmartIR/master/"
+            codes_source = ("https://github.com/"
+                            "fengshutao/SmartIR/master/"
                             "codes/media_player/{}.json")
 
             await Helper.downloader(codes_source.format(device_code), device_json_path)
@@ -329,4 +329,5 @@ class SmartIRMediaPlayer(MediaPlayerEntity, RestoreEntity):
                 self._state = STATE_OFF
                 self._source = None
             elif power_state.state == STATE_ON:
+
                 self._state = STATE_ON
